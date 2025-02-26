@@ -1,0 +1,97 @@
+/* General Styling */
+
+.body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #333;
+    height: 90vh;
+}
+
+/* Main Container */
+.country-details-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Country Details */
+.country-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imgBoxdetail {
+    width: 45%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.details-text-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.details-text-container h1 {
+    font-size: 28px;
+    color: #222;
+}
+
+/* Details Text */
+.details-text p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.details-text b {
+    color: #555;
+}
+
+/* Border Countries */
+.border-countries {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .country-details {
+        flex-direction: column;
+        
+    }
+
+    .imgBoxdetail {
+        width: 80%;
+    }
+
+    .details-text-container {
+        padding: 10px;
+    }
+}
