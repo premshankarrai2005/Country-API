@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { DarkModeContext } from '../contexts/ThemecontextdarkMode';
 import './style.css'
-import errorimg from '../assets/errorpage.png'
+import errorimg from '../assets/error.png'
 function ErrorPage() {
     const [isDark] = useContext(DarkModeContext)
     return (
