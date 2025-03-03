@@ -34,6 +34,9 @@ a {
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
     padding-inline: 24px;
     background-color: var(--elements-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .header-content {
@@ -192,16 +195,16 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #f8f9fa;
+    height: calc(100vh - 72.63px);
+   
     text-align: center;
 }
 
 .error-image {
     width: 50%;
     max-width: 400px;
-    background-color: inherit; /* Match the body's background */
-    mix-blend-mode: multiply; /* Adjust blend mode */
+     /* Match the body's background */
+     /* Adjust blend mode */
 }
 
 .error-title {
