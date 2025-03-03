@@ -2,6 +2,7 @@
 // import CountriesData from "../CountriesData";
 import { useEffect, useState } from "react";
 import CountryCard from "./CountryCard.jsx";
+import CountryListShimmer from "./CountryListShimmer.jsx";
 
 function CountriesList({ Query }) {
   const [CountriesData, setCountriesData] = useState([])
@@ -15,25 +16,26 @@ function CountriesList({ Query }) {
   if (CountriesData.length === 0) {
 
   }
-  // const [Query, setQuery] = useState('')
+
   return (
     <>
-      <div className="countries-container">
-        {CountriesData.filter((country) =>
-          country.name.common.toLowerCase().includes(Query)
-        ).map((country) => {
-          return (
-            <CountryCard
-              name={country.name.common}
-              flag={country.flags.svg}
-              Population={country.population}
-              Region={country.region}
-              Capital={country.capital?.[0]}
-              key={country.name.common}
-            />
-          );
-        })}
-      </div>
+      {!CountriesData.length ? < CountryListShimmer />
+        : <div className="countries-container">
+          {CountriesData.filter((country) =>
+            country.name.common.toLowerCase().includes(Query) || country.region.toLowerCase().includes(Query)
+          ).map((country) => {
+            return (
+              <CountryCard
+                name={country.name.common}
+                flag={country.flags.svg}
+                Population={country.population}
+                Region={country.region}
+                Capital={country.capital?.[0]}
+                key={country.name.common}
+              />
+            );
+          })}
+        </div>}
     </>
 
   );

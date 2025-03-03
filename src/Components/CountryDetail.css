@@ -1,20 +1,17 @@
 /* General Styling */
 
-.body {
+.bodys {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    
-    color: #333;
-    height: 90vh;
+    min-height: 90vh;
 }
 
 /* Main Container */
 .country-details-container {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 20px;
-    background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -24,13 +21,13 @@
     display: inline-flex;
     align-items: center;
     background-color: #007bff;
-    color: white;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
     transition: background 0.3s;
+    color: #f5f5f5;
 }
 
 .back-button:hover {
@@ -60,7 +57,7 @@
 
 .details-text-container h1 {
     font-size: 28px;
-    color: #222;
+    
 }
 
 /* Details Text */
@@ -69,17 +66,53 @@
     margin: 10px 0;
 }
 
-.details-text b {
-    color: #555;
+.details-text b { 
+    white-space: inherit;
 }
 
 /* Border Countries */
 .border-countries {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
+     display: flex; 
+    justify-content: flex-start;
+    align-items: flex-start;  
+    font-size: 16px;
 }
 
+.border-countries b {
+    white-space: nowrap; /* Prevents breaking onto a new line */
+}
+.span{
+    display: inline;
+    display: flex;
+}
+
+.borderlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; 
+}
+
+.borderlink {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;    
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+.dark .borderlink{
+    background-color: #6a6a6a;
+}
+.dark .borderlink:hover{
+    background-color: hsl(208, 27%, 19%)
+}
+.name{
+    padding-top: 4px ;
+}
+
+.borderlink:hover {
+    background-color: #ddd;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .country-details {
@@ -94,4 +127,94 @@
     .details-text-container {
         padding: 10px;
     }
+    .border-countries{
+        max-width: 300px;
+        display: flex;
+        flex-direction: column; /* Display flex column on medium devices */
+    }
+    .details-text p {
+        font-size: 14px;
+        
+    }
+}
+
+
+/* Country Detail Shimmer CSS  */
+.prem .imgdiv{
+    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear
+}
+.country-details-container .shimmer{
+    width: 91px;
+    height: 38px;
+    border-radius: 5px;
+    background-color: #eae8e8ee;
+}
+.prem .details-text-container h1{
+    width: 200px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.prem .details-text-container .first{
+    width: 250px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.prem .details-text-container .second{
+    width: 220px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.prem .details-text-container .third{
+    width: 180px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.prem .details-text-container .forth{
+    width: 160px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.prem .details-text-container .fifth{
+    width: 150px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.prem .details-text-container .sixth{
+    width: 190px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.prem .details-text-container .seventh{
+    width: 250px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.prem .details-text-container .eigth{
+    width: 150px;
+    height:32px ;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+} 
+.border-countries .border{
+    width: 170px;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+    height:32px ;
+}
+.border-countries  p{
+    width: 80px;
+    background-color: #eae8e8ee;
+    border-radius: 5px;
+    height:32px ;
+    margin-right: 12px;
 }
