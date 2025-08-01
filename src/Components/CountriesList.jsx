@@ -1,5 +1,5 @@
 
-// import CountriesData from "../CountriesData";
+import CountriesData from "../CountriesData";
 import { useEffect, useState } from "react";
 import CountryCard from "./CountryCard.jsx";
 import CountryListShimmer from "./CountryListShimmer.jsx";
@@ -7,7 +7,7 @@ import CountryListShimmer from "./CountryListShimmer.jsx";
 function CountriesList({ Query }) {
   const [CountriesData, setCountriesData] = useState([])
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
+    fetch('https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population')
       .then((res) => res.json())
       .then((data) => {
         setCountriesData(data);
